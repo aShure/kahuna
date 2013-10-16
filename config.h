@@ -23,10 +23,10 @@
     #define LED2_PORTNAME   C
     #define LED2_PIN        PC0
 
-    /* usb */
-    #define USB_CFG_IOPORTNAME      D
-    #define USB_CFG_DMINUS_BIT      4
-    #define USB_CFG_DPLUS_BIT       3
+    /* usb  D 4 3 */
+    #define USB_CFG_IOPORTNAME      B
+    #define USB_CFG_DMINUS_BIT      0
+    #define USB_CFG_DPLUS_BIT       1
     /* use int1 */
     #define USB_INTR_CFG_SET        ((1 << ISC10) | (1 << ISC11))
     #define USB_INTR_ENABLE_BIT     INT1
@@ -54,6 +54,30 @@
     #define USB_CFG_DPLUS_BIT       2
     #define USB_CFG_PULLUP_IOPORTNAME   B
     #define USB_CFG_PULLUP_BIT          0
+
+#elif defined(HARDWARE_usbasp)
+    /* isp pins */
+    #define SPI_PORTNAME    B
+    #define SPI_SS      PB2
+    #define SPI_MOSI    PB3
+    #define SPI_MISO    PB4
+    #define SPI_SCK     PB5
+    #define SPI_CS      PB2
+
+    /* led pins */
+    #define LED1_PORTNAME   C
+    #define LED1_PIN        PC1
+    #define LED2_PORTNAME   C
+    #define LED2_PIN        PC0
+
+    /* usb */
+    #define USB_CFG_IOPORTNAME      B
+    #define USB_CFG_DMINUS_BIT      0
+    #define USB_CFG_DPLUS_BIT       1
+    #define USB_CFG_PULLUP_IOPORTNAME   D
+    #define USB_CFG_PULLUP_BIT          2
+
+
 
 #else
     #error "unknown hardware platform!"

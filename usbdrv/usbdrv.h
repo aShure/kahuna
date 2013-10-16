@@ -450,45 +450,45 @@ extern volatile schar   usbRxLen;
 #ifndef __ASSEMBLER__
 extern
 #if !(USB_CFG_DESCR_PROPS_DEVICE & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const char usbDescriptorDevice[];
+char usbDescriptorDevice[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_CONFIGURATION & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const char usbDescriptorConfiguration[];
+char usbDescriptorConfiguration[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_HID_REPORT & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const char usbDescriptorHidReport[];
+char usbDescriptorHidReport[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_STRING_0 & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const char usbDescriptorString0[];
+char usbDescriptorString0[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_STRING_VENDOR & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const int usbDescriptorStringVendor[];
+int usbDescriptorStringVendor[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_STRING_PRODUCT & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const int usbDescriptorStringDevice[];
+int usbDescriptorStringDevice[];
 
 extern
 #if !(USB_CFG_DESCR_PROPS_STRING_SERIAL_NUMBER & USB_PROP_IS_RAM)
-PROGMEM
+PROGMEM const
 #endif
-const int usbDescriptorStringSerialNumber[];
+int usbDescriptorStringSerialNumber[];
 
 #endif /* __ASSEMBLER__ */
 

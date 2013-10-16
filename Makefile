@@ -11,7 +11,7 @@ HARDWARE = kahuna
 MCU = atmega8
 
 # frequency
-F_CPU = 16000000UL
+F_CPU = 12000000UL
 
 # main application name (without .hex)
 # eg 'test' when the main function is defined in 'test.c'
